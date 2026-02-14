@@ -1,43 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="theme-color" content="#faf6f0" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
+    <!--
+      ═══════════════════════════════════════════════════════
+      📱 카카오톡/SNS 미리보기 설정 - 아래 내용을 수정하세요!
+      ═══════════════════════════════════════════════════════
+
+      ✏️ 수정할 곳:
+        1. <title> → 브라우저 탭에 표시될 제목
+        2. og:title → 카카오톡에 공유했을 때 보이는 제목
+        3. og:description → 카카오톡에 공유했을 때 보이는 설명
+        4. og:url → 배포 후 실제 URL
+        5. og:image → 카톡 미리보기 이미지 (1200x630px 추천)
+                       public/images/ 폴더에 og-image.jpg 넣기
+
+      💡 config.js와는 별개로, 이 파일에서 직접 수정해야 합니다.
     -->
-    <title>React App</title>
+
+    <!-- ✏️ 브라우저 탭 제목 (예: "우리의 이야기 💕") -->
+    <meta name="description" content="페이지 설명을 입력하세요" />
+    <title>페이지 제목을 입력하세요</title>
+
+    <!-- ✏️ 카카오톡 / SNS 공유 미리보기 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="카톡 공유 시 보이는 제목" />
+    <meta property="og:description" content="카톡 공유 시 보이는 설명" />
+    <meta property="og:url" content="https://배포-후-실제-URL.com" />
+    <meta property="og:image" content="%PUBLIC_URL%/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- ✏️ 트위터 공유 미리보기 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="트위터 공유 시 보이는 제목" />
+    <meta name="twitter:description" content="트위터 공유 시 보이는 설명" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/images/og-image.jpg" />
+
+    <!-- ✏️ iOS 홈화면에 추가했을 때 표시될 이름 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="홈화면 아이콘 이름" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>이 페이지를 보려면 JavaScript를 활성화해주세요.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

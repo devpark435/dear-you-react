@@ -1,0 +1,72 @@
+/* ═══════════════════════════════════════════════════════
+   💕 Dear You - 스타일시트
+   ═══════════════════════════════════════════════════════ */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+KR:wght@200;300;400;500&family=Nanum+Myeongjo:wght@400;700&display=swap");
+
+/* ── 리셋 ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #faf6f0;
+  overflow-x: hidden;
+}
+
+/* ── 스크롤바 ── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #faf6f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4c4b0;
+  border-radius: 2px;
+}
+
+/* ── 애니메이션 ── */
+@keyframes gentleBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ── 메인 컨테이너 ── */
+.dear-you-app {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #faf6f0;
+  min-height: 100vh;
+  position: relative;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 521px) {
+  body {
+    background: #f0ebe4;
+  }
+}
