@@ -23,14 +23,9 @@ cd dear-you
 npm install
 ```
 
-### 2. 설정 파일 만들기
+### 2. 내 정보 입력하기
 
-```bash
-cp src/config.example.js src/config.js
-```
-
-> `config.example.js`는 가이드가 적힌 템플릿입니다.  
-> 복사한 `config.js`에 자신의 내용을 채워넣으세요.
+`src/config.js`를 열어서 가이드 텍스트를 자신의 내용으로 수정하세요.
 
 ### 3. 사진 넣기
 
@@ -63,20 +58,20 @@ npm start
 
 ```js
 couple: {
-  me: "민수",           // 나의 이름
-  you: "지은",          // 상대방 이름
+  me: "나의 이름",
+  you: "상대방 이름",
 },
-startDate: "2024-03-15", // 사귄 날짜 → D+day 자동 계산
+startDate: "2024-01-01",    // YYYY-MM-DD 형식 → D+day 자동 계산
 ```
 
 ### 히어로 (첫 화면)
 
 ```js
 hero: {
-  title: "Dear You",              // 메인 타이틀
-  subtitle: "우리의 소중한 순간들",  // 서브 타이틀
-  scrollText: "Scroll",           // 스크롤 안내 문구
-  image: "/images/hero.jpg",      // 배경 이미지
+  title: "페이지 제목",
+  subtitle: "부제목 텍스트",
+  scrollText: "스크롤 안내 문구",
+  image: "/images/hero.jpg",
 },
 ```
 
@@ -84,8 +79,8 @@ hero: {
 
 ```js
 dday: {
-  label: "We've been together",   // 숫자 위 문구
-  suffix: "일째 함께하는 중",       // 숫자 아래 문구
+  label: "D+Day 상단 문구",
+  suffix: "D+Day 하단 문구",
 },
 ```
 
@@ -94,11 +89,11 @@ dday: {
 ```js
 sections: [
   {
-    date: "2024.03.15",
-    title: "처음 만난 날",
-    description: "카페에서 눈이 마주쳤던 순간,\n시간이 멈춘 것 같았어.",
+    date: "YYYY.MM.DD",
+    title: "이 날의 제목",
+    description: "이 날의 설명",
     image: "/images/photo1.jpg",
-    layout: "full",               // 레이아웃 선택
+    layout: "full",             // "full" | "left" | "right"
   },
   // 원하는 만큼 추가 가능!
 ],
@@ -108,10 +103,10 @@ sections: [
 
 ```js
 letter: {
-  label: "Love Letter",
-  toSuffix: "에게",                // "지은에게" 형태로 표시됨
-  message: "편지 내용...\n줄바꿈은 \\n 사용",
-  closing: "사랑해 💕",
+  label: "편지 섹션 라벨",
+  toSuffix: "에게",              // "{상대방 이름}에게" 형태로 표시됨
+  message: "편지 본문 내용",      // 줄바꿈은 \n 사용
+  closing: "편지 마무리 인사",
 },
 ```
 
@@ -119,8 +114,8 @@ letter: {
 
 ```js
 footer: {
-  title: "Happy Valentine's Day",
-  subtitle: "MADE WITH ♥ FOR YOU",
+  title: "푸터 메인 문구",
+  subtitle: "푸터 서브 문구",
 },
 ```
 
@@ -188,15 +183,14 @@ footer: {
 
 ## 🔒 프라이버시
 
-개인 정보가 담긴 파일은 `.gitignore`에 등록되어 **git에 올라가지 않습니다**:
+커플 사진은 `.gitignore`에 등록되어 **git에 올라가지 않습니다**:
 
 | 파일 | 설명 |
 |------|------|
-| `src/config.js` | 이름, 날짜, 편지 내용 등 개인정보 |
 | `public/images/*` | 커플 사진 |
 
-대신 `src/config.example.js`가 가이드 템플릿으로 포함되어 있어서,  
-클론한 사람은 이걸 복사해서 자신의 `config.js`를 만들면 됩니다.
+> `src/config.js`는 가이드 텍스트 상태로 포함되어 있습니다.  
+> 개인 내용을 입력한 뒤 배포할 때, 본인의 리포지토리에서 관리하세요.
 
 <br>
 
@@ -209,8 +203,7 @@ dear-you/
 │   │   └── .gitkeep
 │   └── index.html         ← OG태그 (카톡 미리보기)
 ├── src/
-│   ├── config.example.js  ← 🎯 설정 템플릿 (가이드 포함)
-│   ├── config.js          ← 🔒 내 설정 (gitignore됨)
+│   ├── config.js          ← 🎯 여기만 수정!
 │   ├── App.jsx            ← 메인 컴포넌트 (수정 불필요)
 │   ├── styles.css         ← 전역 스타일
 │   └── index.js           ← 엔트리포인트
