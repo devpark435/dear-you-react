@@ -28,4 +28,4 @@ public/images/*
 !public/images/.gitkeep
 
 # 개인 설정 파일 - 이름, 날짜, 편지 등 개인정보 포함
-src/config.js
+# src/config.js

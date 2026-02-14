@@ -41,9 +41,9 @@ const CONFIG = {
   // ── 📸 사진 섹션 (원하는 만큼 추가/삭제 가능!) ──
   //
   // layout 옵션:
-  //   "full"  → 사진이 전체 너비로 표시
-  //   "left"  → 사진 왼쪽, 텍스트 오른쪽
-  //   "right" → 사진 오른쪽, 텍스트 왼쪽
+  //   "center" → 사진 가운데, 텍스트 가운데
+  //   "left"   → 사진 왼쪽, 텍스트 왼쪽
+  //   "right"  → 사진 오른쪽, 텍스트 오른쪽
   //
   sections: [
     {
@@ -51,16 +51,37 @@ const CONFIG = {
       title: "이 날의 제목",
       description: "이 날의 설명",
       image: "/images/photo1.jpg",
-      layout: "full",
+      layout: "center",
+    },
+    {
+      date: "YYYY.MM.DD",
+      title: "이 날의 제목",
+      description: "이 날의 설명",
+      image: "/images/photo2.jpg",
+      layout: "left",
+    },
+    {
+      date: "YYYY.MM.DD",
+      title: "이 날의 제목",
+      description: "이 날의 설명",
+      image: "/images/photo3.jpg",
+      layout: "right",
     },
   ],
 
-  // ── 💌 편지 섹션 ──
+  // ── 💌 편지 섹션 (초콜릿 인터랙션) ──
+  //
+  // 하트 모양 초콜릿을 5번 터치하면 깨지면서 편지가 나타납니다
+  //
   letter: {
     label: "편지 섹션 라벨",
     toSuffix: "에게",
     message: "편지 본문 내용",
     closing: "편지 마무리 인사",
+    gift: "인터랙션 상단 라벨",
+    hintStart: "초콜릿을 터치해보세요 🍫",
+    hintMore: "한 번 더! 💥",
+    hintAlmost: "거의 다 왔어요! 💖",
   },
 
   // ── 🔻 하단 푸터 ──
